@@ -107,15 +107,10 @@ function reader()
 function writer()
 {
 	var csv = document.getElementById("enterCSV").value;
-	$.ajax(
-	{
-		url: "writer.php",
-		type: "POST",
-		data: {csvVal: csv},
-		cache: false,
-		success: function(response){
-			alert(response);
-		}
-	}
-	);
+	$.post("writer.php",
+			{'csvData': csv},
+			function(response){
+			}, "text"
+			);
+			return false;
 }
