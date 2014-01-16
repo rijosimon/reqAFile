@@ -104,13 +104,14 @@ function reader()
 	xhr.send();
 }
 
-function writer(csv)
+function writer()
 {
+	var csv = document.getElementById("enterCSV").value;
 	$.ajax(
 	{
 		url: "writer.php",
 		type: "POST",
-		data: {data: csv},
+		data: {csvVal: csv},
 		cache: false,
 		success: function(response){
 			alert(response);
