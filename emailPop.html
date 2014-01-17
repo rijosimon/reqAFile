@@ -1,0 +1,13 @@
+<html>
+<head>
+<script src="requisition.js"></script>
+</head>
+<body>
+<form id="reqForm" action="mailer.php" method="get">
+Name: <input id="nameReceive" /><br />
+Email Id: <input id = "emailAddr" /><br />
+Requested File Description: <textarea id = "descFileDescr"></textarea><br />
+<input type = "submit" onclick = "sendReqEmail()" value="Submit" />
+</form>
+</body>
+</html>
